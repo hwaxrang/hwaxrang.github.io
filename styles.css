@@ -287,6 +287,28 @@ h3 {
 }
 
 .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: 0 0 6px;
+  color: rgba(0, 0, 0, 0.48);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pub-status {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pub-venue-meta {
+  white-space: nowrap;
+}
+
+.submeta {
   margin: 0 0 10px;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
