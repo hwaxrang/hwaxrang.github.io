@@ -287,18 +287,16 @@ h3 {
 }
 
 .pub-meta-block {
-  --status-width: 168px;
-  --meta-gap: 12px;
   display: grid;
   gap: 4px;
   margin: 0 0 10px;
 }
 
 .meta {
-  display: grid;
-  grid-template-columns: var(--status-width) minmax(0, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  column-gap: 3px;
+  gap: 0;
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -314,17 +312,16 @@ h3 {
 
 .pub-status::after {
   content: "|";
-  margin-left: 3px;
+  margin: 0 3px;
 }
 
 .pub-venue-meta {
-  min-width: 0;
   text-transform: none;
   letter-spacing: 0.01em;
 }
 
 .submeta {
-  margin: 0 0 0 calc(var(--status-width) + var(--meta-gap));
+  margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
   font-size: 0.72em;
@@ -436,17 +433,14 @@ h3 {
   }
 
   .pub-meta-block {
-    --status-width: 0px;
-    --meta-gap: 0px;
   }
 
   .meta {
-    grid-template-columns: 1fr;
-    row-gap: 2px;
+    gap: 0;
   }
 
   .submeta {
-    margin-left: 0;
+    margin: 0;
   }
 }
 
