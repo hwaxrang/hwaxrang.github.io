@@ -287,16 +287,16 @@ h3 {
 }
 
 .pub-meta-block {
+  --meta-indent: 152px;
   display: grid;
   gap: 4px;
   margin: 0 0 10px;
 }
 
 .meta {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: 0 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -306,20 +306,22 @@ h3 {
 }
 
 .pub-status {
+  display: inline-block;
+  min-width: var(--meta-indent);
   font-weight: 700;
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .pub-venue-meta {
+  flex: 1 1 auto;
   min-width: 0;
   text-transform: none;
   letter-spacing: 0.01em;
 }
 
 .submeta {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0 10px;
+  padding-left: var(--meta-indent);
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -329,8 +331,7 @@ h3 {
 }
 
 .submeta-spacer {
-  display: block;
-  width: 0;
+  display: none;
 }
 
 .pub-metrics {
@@ -434,6 +435,24 @@ h3 {
 
   .cv-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pub-meta-block {
+    --meta-indent: 0px;
+  }
+
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .pub-status {
+    min-width: 0;
+  }
+
+  .submeta {
+    padding-left: 0;
   }
 }
 
