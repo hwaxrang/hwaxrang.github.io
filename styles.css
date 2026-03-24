@@ -56,11 +56,22 @@ h3 {
 .name-hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 82%;
   height: 100%;
   margin: auto;
-  padding: 28px 0;
+  padding: 60px 0 28px;
+}
+
+.panel-label {
+  margin: 0 0 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.48);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.66em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .profile-panel {
@@ -295,6 +306,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+  margin-top: 24px;
 }
 
 .cv-card {
