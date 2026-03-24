@@ -294,9 +294,9 @@ h3 {
 
 .meta {
   display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: 0 8px;
+  gap: 0 10px;
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -310,10 +310,6 @@ h3 {
   white-space: nowrap;
 }
 
-.pub-separator {
-  white-space: nowrap;
-}
-
 .pub-venue-meta {
   min-width: 0;
   text-transform: none;
@@ -322,8 +318,8 @@ h3 {
 
 .submeta {
   display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr);
-  gap: 0 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0 10px;
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -334,6 +330,7 @@ h3 {
 
 .submeta-spacer {
   display: block;
+  width: 0;
 }
 
 .pub-metrics {
