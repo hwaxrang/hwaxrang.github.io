@@ -11,181 +11,162 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#about" class="logo">~/hwaxrang</a>
-      <ul class="nav-menu">
-        <li><a href="#about" class="nav-link">Home</a></li>
-        <li><a href="#publications" class="nav-link">Publications</a></li>
-        <li><a href="#cv" class="nav-link">CV</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <section id="about" class="section">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-wrapper">
-            <div class="about-image">
-              <div class="image-frame">
-                <img src="assets/profile-photo.jpeg" alt="Portrait of Hwarang Kwon" class="profile-img">
-              </div>
-            </div>
-
-            <div class="about-text">
-              <h1 class="about-greeting">
-                <span class="accent-text">Hello.</span><br>
-                I'm Hwarang Kwon
-              </h1>
-
-              <p class="lead">
-                I'm an M.S. student in Applied Artificial Intelligence at Myongji University and a member of the
-                <a href="https://ds.mju.ac.kr" target="_blank" rel="noopener">DataScience Lab</a>, advised by Professor Jaehee Jung.
-              </p>
-
-              <p>
-                My research focuses on graph representation learning and knowledge-graph-based models, especially for
-                biomedical and information-centric applications. I am interested in building knowledge-driven systems
-                that remain effective under sparse-data settings.
-              </p>
-
-              <div class="interests">
-                <h3>Research Interests</h3>
-                <div class="interest-tags">
-                  <span class="tag">Graph Representation Learning</span>
-                  <span class="tag">Knowledge Graph Embedding</span>
-                  <span class="tag">Biomedical Knowledge Graphs</span>
-                  <span class="tag">Drug-Target Interaction</span>
-                  <span class="tag">Recommendation</span>
-                </div>
-              </div>
-
-              <p class="lead secondary">
-                I am currently working on cold-start biomedical prediction, continual knowledge graph embedding, and
-                automatic construction of personalized knowledge graphs.
-              </p>
-
-              <div class="social-links">
-                <a href="mailto:hwaxrang@mju.ac.kr" class="social-link">Email</a>
-                <a href="https://github.com/hwaxrang" target="_blank" rel="noopener" class="social-link">GitHub</a>
-                <a href="main_cv.pdf" download class="social-link">Download CV</a>
-              </div>
-            </div>
+  <div class="wrapper clearfix">
+    <aside class="left">
+      <div class="name-hero">
+        <div class="profile-panel">
+          <div class="portrait-shell">
+            <img class="me-img" src="assets/profile-photo.jpeg" alt="Portrait of Hwarang Kwon">
           </div>
+          <p class="portrait-note">Personal Academic Page</p>
+        </div>
+
+        <div class="name-text">
+          <h1>Hwarang <em>Kwon</em></h1>
+          <p class="headline">Graph Representation Learning for Biomedical Knowledge Graphs</p>
+          <p>M.S. Student, Applied Artificial Intelligence</p>
+          <p>DataScience Lab, Myongji University</p>
+          <p><a href="mailto:hwaxrang@mju.ac.kr">hwaxrang@mju.ac.kr</a></p>
+
+          <div class="action-buttons">
+            <a class="button button-primary" href="main_cv.pdf" download>Download CV</a>
+            <a class="button button-secondary" href="https://github.com/hwaxrang" target="_blank" rel="noopener">GitHub</a>
+          </div>
+
+          <nav class="quick-nav" aria-label="Quick navigation">
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <section id="publications" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Selected Publications</h2>
-        </div>
+    <main class="right">
+      <div class="inner">
+        <section id="about">
+          <h1>About</h1>
+          <p>
+            I am an M.S. student in Applied Artificial Intelligence at Myongji University and a member of the
+            <a class="inline-link" href="https://ds.mju.ac.kr" target="_blank" rel="noopener">DataScience Lab</a>,
+            advised by Professor Jaehee Jung.
+          </p>
+          <p>
+            My research focuses on graph representation learning and knowledge-graph-based models, especially in
+            biomedical and information-centric settings. I am interested in building knowledge-driven systems that
+            remain effective under sparse-data conditions.
+          </p>
 
-        <div class="publications-list">
-          <article class="publication-item">
-            <div class="pub-year">2025</div>
-            <div class="pub-content">
-              <h3 class="pub-title">Effect of Removing the Prediction Target from a Knowledge Graph on Representation Learning and the Classifier</h3>
-              <p class="pub-authors">Hwarang Kwon, Jaehee Jung</p>
-              <p class="pub-venue">Korea Software Congress (KSC), 2025.</p>
-              <p class="pub-summary">
-                Examines how removing the target node from a knowledge graph changes learned representations and the
-                behavior of downstream classifiers.
-              </p>
-            </div>
-          </article>
+          <div class="tag-block">
+            <h2>Research Interests</h2>
+            <ul class="interest-list">
+              <li>Graph Representation Learning</li>
+              <li>Knowledge Graph Embedding</li>
+              <li>Biomedical Knowledge Graphs</li>
+              <li>Drug-Target Interaction Prediction</li>
+              <li>Knowledge-Graph-based Recommendation</li>
+            </ul>
+          </div>
+        </section>
 
-          <article class="publication-item">
-            <div class="pub-year">Revision</div>
-            <div class="pub-content">
-              <h3 class="pub-title">GLANCE: Pair-Level Fusion within Multi-View Representations for Cold-Start Drug-Target Interaction Prediction on Knowledge Graphs</h3>
-              <p class="pub-authors">Hwarang Kwon, Jeongho Kim, Jaehee Jung</p>
-              <p class="pub-venue">IEEE Journal of Biomedical and Health Informatics (JBHI).</p>
-              <p class="pub-summary">
-                Proposes a multi-view representation learning approach for robust cold-start drug-target interaction
-                prediction in biomedical knowledge graphs.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        <section id="publications">
+          <h1>Selected Publications</h1>
 
-    <section id="cv" class="section">
-      <div class="container">
-        <h2 class="section-title">Curriculum Vitae</h2>
-
-        <div class="cv-content">
-          <div class="cv-download">
-            <p class="cv-description">
-              Download the latest CV for a detailed overview of research, education, grants, and experience.
+          <article class="entry publication-entry">
+            <p class="meta">Under Revision · JBHI</p>
+            <h2>GLANCE: Pair-Level Fusion within Multi-View Representations for Cold-Start Drug-Target Interaction Prediction on Knowledge Graphs</h2>
+            <p class="authors">Hwarang Kwon, Jeongho Kim, Jaehee Jung</p>
+            <p>
+              A multi-view representation learning framework for robust cold-start drug-target interaction prediction
+              on biomedical knowledge graphs.
             </p>
-            <a href="main_cv.pdf" class="btn btn-primary" download>Download CV</a>
+          </article>
+
+          <article class="entry publication-entry">
+            <p class="meta">Published · KSC 2025</p>
+            <h2>Effect of Removing the Prediction Target from a Knowledge Graph on Representation Learning and the Classifier</h2>
+            <p class="authors">Hwarang Kwon, Jaehee Jung</p>
+            <p>
+              An analysis of how target removal changes representation learning behavior and downstream classifier
+              performance in knowledge graph settings.
+            </p>
+          </article>
+        </section>
+
+        <section id="cv">
+          <h1>Curriculum Vitae</h1>
+
+          <div class="cv-grid">
+            <div class="cv-card cv-download-card">
+              <h2>Download</h2>
+              <p>Download the latest CV for a detailed overview of research, education, grants, and experience.</p>
+              <a class="button button-primary" href="main_cv.pdf" download>Download CV</a>
+            </div>
+
+            <div class="cv-card">
+              <h2>Education</h2>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>M.S. in Applied Artificial Intelligence</h3>
+                  <span>Mar 2025 - Present</span>
+                </div>
+                <p>Myongji University, DataScience Lab</p>
+              </div>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>B.S. in Computer Engineering</h3>
+                  <span>Mar 2020 - Feb 2025</span>
+                </div>
+                <p>Myongji University</p>
+              </div>
+            </div>
+
+            <div class="cv-card">
+              <h2>Grants & Honors</h2>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>NRF Master's Student Research Encouragement Grant</h3>
+                  <span>Sep 2025 - Aug 2026</span>
+                </div>
+                <p>KRW 12,000,000 project on cold-start drug-target interaction prediction</p>
+              </div>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>Best Final Project Award, AI Devcourse</h3>
+                  <span>2023</span>
+                </div>
+                <p>Programmers</p>
+              </div>
+            </div>
+
+            <div class="cv-card" id="contact">
+              <h2>Experience & Contact</h2>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>Undergraduate Researcher</h3>
+                  <span>Oct 2024 - Feb 2025</span>
+                </div>
+                <p>DataScience Lab, Myongji University</p>
+              </div>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <h3>Contact</h3>
+                  <span>Open to Research Discussion</span>
+                </div>
+                <p><a class="inline-link" href="mailto:hwaxrang@mju.ac.kr">hwaxrang@mju.ac.kr</a></p>
+              </div>
+            </div>
           </div>
-
-          <div class="cv-preview">
-            <div class="cv-item">
-              <h3>Education</h3>
-              <div class="cv-entry">
-                <div class="cv-entry-header">
-                  <h4>M.S. in Applied Artificial Intelligence</h4>
-                  <span class="cv-date">Mar 2025 - Present</span>
-                </div>
-                <p class="cv-institution">Myongji University, DataScience Lab</p>
-
-                <div class="cv-entry-header">
-                  <h4>B.S. in Computer Engineering</h4>
-                  <span class="cv-date">Mar 2020 - Feb 2025</span>
-                </div>
-                <p class="cv-institution">Myongji University</p>
-              </div>
-            </div>
-
-            <div class="cv-item">
-              <h3>Grants & Honors</h3>
-              <div class="cv-entry">
-                <div class="cv-entry-header">
-                  <h4>NRF Master's Student Research Encouragement Grant</h4>
-                  <span class="cv-date">Sep 2025 - Aug 2026</span>
-                </div>
-                <p class="cv-institution">KRW 12,000,000 project on cold-start drug-target interaction prediction</p>
-
-                <div class="cv-entry-header">
-                  <h4>Best Final Project Award, AI Devcourse</h4>
-                  <span class="cv-date">2023</span>
-                </div>
-                <p class="cv-institution">Programmers</p>
-              </div>
-            </div>
-
-            <div class="cv-item">
-              <h3>Research Experience</h3>
-              <div class="cv-entry">
-                <div class="cv-entry-header">
-                  <h4>Undergraduate Researcher</h4>
-                  <span class="cv-date">Oct 2024 - Feb 2025</span>
-                </div>
-                <p class="cv-institution">DataScience Lab, Myongji University</p>
-
-                <div class="cv-entry-header">
-                  <h4>Core Skills</h4>
-                  <span class="cv-date">Current</span>
-                </div>
-                <p class="cv-institution">Python, C, PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-    </section>
-  </main>
+    </main>
+  </div>
 </body>
 </html>
