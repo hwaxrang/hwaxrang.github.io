@@ -298,7 +298,7 @@ h3 {
   display: grid;
   grid-template-columns: var(--status-width) minmax(0, 1fr);
   align-items: baseline;
-  column-gap: var(--meta-gap);
+  column-gap: 3px;
   margin: 0;
   color: rgba(0, 0, 0, 0.48);
   font-family: "Open Sans", sans-serif;
@@ -310,6 +310,11 @@ h3 {
 .pub-status {
   font-weight: 700;
   white-space: nowrap;
+}
+
+.pub-status::after {
+  content: "|";
+  margin-left: 3px;
 }
 
 .pub-venue-meta {
