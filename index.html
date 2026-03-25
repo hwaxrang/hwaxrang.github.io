@@ -25,6 +25,35 @@
         window.scrollTo(0, 0);
       }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const source = document.getElementById("publication-source");
+      const manuscriptsList = document.getElementById("manuscripts-list");
+      const publicationsList = document.getElementById("publications-list");
+
+      if (!source || !manuscriptsList || !publicationsList) {
+        return;
+      }
+
+      const manuscriptStatuses = new Set(["under review", "under revision", "in preparation"]);
+      const publicationStatuses = new Set(["published", "accepted"]);
+
+      Array.from(source.children).forEach(function (item) {
+        const status = (item.dataset.status || "").trim().toLowerCase();
+
+        if (manuscriptStatuses.has(status)) {
+          manuscriptsList.appendChild(item);
+          return;
+        }
+
+        if (publicationStatuses.has(status)) {
+          publicationsList.appendChild(item);
+          return;
+        }
+
+        publicationsList.appendChild(item);
+      });
+    });
   </script>
 </head>
 <body>
@@ -53,6 +82,7 @@
 
           <nav class="quick-nav" aria-label="Quick navigation">
             <a href="#about">About</a>
+            <a href="#manuscripts">Manuscripts</a>
             <a href="#publications">Publications</a>
             <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
@@ -80,10 +110,17 @@
           </div>
         </section>
 
+        <section id="manuscripts">
+          <h1>Manuscripts</h1>
+          <div id="manuscripts-list" class="publication-list"></div>
+        </section>
+
         <section id="publications">
           <h1>Publications</h1>
+          <div id="publications-list" class="publication-list"></div>
 
-          <article class="entry publication-entry">
+          <div id="publication-source" class="publication-source" aria-hidden="true">
+          <article class="entry publication-entry" data-status="under revision">
             <div class="pub-meta-block">
               <div class="meta">
                 <span class="pub-status">Under Revision</span>
@@ -100,7 +137,7 @@
             </p>
           </article>
 
-          <article class="entry publication-entry">
+          <article class="entry publication-entry" data-status="published">
             <div class="pub-meta-block">
               <div class="meta">
                 <span class="pub-status">Published</span>
@@ -116,6 +153,7 @@
               performance in knowledge graph settings.
             </p>
           </article>
+          </div>
         </section>
 
         <section id="cv">

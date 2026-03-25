@@ -286,6 +286,15 @@ h3 {
   padding-bottom: 0;
 }
 
+.publication-list {
+  display: grid;
+  gap: 0;
+}
+
+.publication-source {
+  display: none;
+}
+
 .pub-meta-block {
   display: grid;
   gap: 4px;
