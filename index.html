@@ -35,7 +35,7 @@
         return;
       }
 
-      const manuscriptStatuses = new Set(["under review", "under revision", "in preparation"]);
+      const manuscriptStatuses = new Set(["submitted", "under review", "under revision", "in preparation"]);
       const publicationStatuses = new Set(["published", "accepted"]);
 
       Array.from(source.children).forEach(function (item) {
@@ -96,13 +96,13 @@
         <section id="about">
           <h1>About</h1>
           <p>
-            My research centers on Graph Representation Learning and Knowledge Graphs, with particular interests in Knowledge Graph Embedding, Graph Neural Networks, AI for Science, and a variety of graph-based downstream tasks. I am especially passionate about applying graph-based methodologies to analyze complex data, uncover meaningful insights, and contribute to the advancement of Graph-AI-driven solutions.
+            My research centers on Graph-based AI and Knowledge Graph, with particular interests in Knowledge Graph Embedding, Graph Neural Networks, AI for Science, and a variety of graph-based downstream tasks. I am especially passionate about applying graph-based methodologies to analyze complex data, uncover meaningful insights, and contribute to the advancement of Graph-AI-driven solutions.
           </p>
 
           <div class="tag-block">
             <h2>Research Interests</h2>
             <ul class="interest-list">
-              <li>Graph Representation Learning</li>
+              <li>Graph-based AI</li>
               <li>Knowledge Graph</li>
               <li>Bioinformatics</li>
               <li>AI for Science</li>
@@ -120,21 +120,35 @@
           <div id="publications-list" class="publication-list"></div>
 
           <div id="publication-source" class="publication-source" aria-hidden="true">
-          <article class="entry publication-entry" data-status="under revision">
+          <article class="entry publication-entry" data-status="submitted">
             <div class="pub-meta-block">
               <div class="meta">
-                <span class="pub-status">Under Revision</span>
+                <span class="pub-status">submition</span>
                 <div class="pub-meta-right">
-                  <p class="pub-venue-meta">IEEE Journal of Biomedical and Health Informatics (JBHI) · Q1 · Impact Factor 6.7</p>
+                  <p class="pub-venue-meta">Engineering Applications of Artificial Intelligence (EAAI) · Q1 · Impact Factor 8.0</p>
                 </div>
               </div>
             </div>
-            <h2>GLANCE: Pair-Level Fusion within Multi-View Representations for Cold-Start Drug-Target Interaction Prediction on Knowledge Graphs</h2>
+            <h2>Pair-Level Fusion within Multi-View Representations for Cold-Start Drug-Target Interaction Prediction on Knowledge Graphs</h2>
             <p class="authors">Hwarang Kwon, Jeongho Kim, Jaehee Jung</p>
             <p>
               A Graph-based Learning with Attention for pair-level fusion of Node-level Complementary Embeddings (GLANCE) framework for robust cold-start drug-target interaction prediction
               on biomedical knowledge graphs.
             </p>
+          </article>
+
+          <article class="entry publication-entry" data-status="submitted">
+            <div class="pub-meta-block">
+              <div class="meta">
+                <span class="pub-status">submition</span>
+                <div class="pub-meta-right">
+                  <p class="pub-venue-meta">Conference on Neural Information Processing Systems (NeurIPS 2026)</p>
+                </div>
+              </div>
+            </div>
+            <h2>Temporal Residual Memory for Mitigating Catastrophic Forgetting in Continual Knowledge Graph Embedding</h2>
+            <p class="authors">Hwarang Kwon*, Jeongho Kim*, Jaehee Jung (* co-first authors)</p>
+            
           </article>
 
           <article class="entry publication-entry" data-status="published">
